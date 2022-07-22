@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Box-Shadow Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a href="https://github.com/exshid/"><i class="bi bi-github"></i></a>
+
+    <main class="main">
+
+        <div class="numbers">
+            <div class="slideroutercontainer">
+                <label class="switch" for="inset">Inset</label>
+                <label class="switch">
+                    <input type="checkbox" class="inset" id="inset">
+                    <span class="slider2"></span>
+                </label>
+                <div class="slidecontainer">
+                    <label for="xoffset">X offset</label>
+                    <input type="range" min="-100" max="100" value="0" class="slider" id="xoffset">
+                </div>
+                <div class="slidecontainer">
+                    <label for="yoffset">Y offset</label>
+                    <input type="range" min="-100" max="100" value="25" class="slider" id="yoffset">
+                </div>
+                <div class="slidecontainer">
+                    <label for="spread">Spread</label>
+                    <input type="range" min="1" max="100" value="4" class="slider" id="spread">
+                </div>
+                <div class="slidecontainer">
+                    <label for="blur">Blur</label>
+
+                    <input type="range" min="1" max="100" value="50" class="slider" id="blur">
+                </div>
+                <div class="slidecontainer">
+                    <label for="opacity">Opacity</label>
+                    <input type="range" min="0" max="100" value="66" class="slider" id="opacity">
+                </div>
+                <label class="switch1">
+                    <input type="color" value="#111111" class="color">
+                    <span>Color</span>
+                </label>
+
+            </div>
+        </div>
+        <div class="codecontainer">
+            <div class="code">
+                <p class="result">box-shadow: 0 0 50 50 rgba(0,0,0,0.5);<br>
+                    -webkit-box-shadow: 0 0 50 50 rgba(0,0,0,0.5);<br>
+                    -moz-box-shadow: 0 50 50 rgba(0,0,0,0.5);
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

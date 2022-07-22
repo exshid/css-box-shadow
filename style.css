@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right top, #051937, #00466d, #007aa0, #00b2c8, #12ebe2);
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.codecontainer {
+    width: 40%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code {
+    width: 95%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    color: #000;
+    box-shadow: -2px 22px 50px 4px rgba(0, 0, 0, 0.67);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.numbers {
+    width: 30%;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 40px;
+    height: auto;
+    box-shadow: 0 5px 17px 0 rgb(0 0 0 / 24%), 0 0 1px #a2a9b1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slideroutercontainer {
+    width: 100%;
+}
+
+.box {
+    color: #0000008a;
+    box-shadow: 0 5px 17px 0 rgb(0 0 0 / 24%), 0 0 1px #a2a9b1;
+    width: 90%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 120px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #0FE4DF;
+    cursor: pointer;
+    border-radius: 120px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #0FE4DF;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.bi-github {
+    position: fixed;
+    font-size: 3rem;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider2 {
+    position: absolute;
+    border-radius: 120px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider2:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider2 {
+    background-color: #0FE4DF;
+}
+
+input:focus+.slider2 {
+    box-shadow: 0 0 1px #0FE4DF;
+}
+
+input:checked+.slider2:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
